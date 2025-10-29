@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyosan High Quarantine Zone - All of Us Are Dead</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font for a horror aesthetic: Press Start 2P and Inter for body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-blood: #880000;
+            --color-dark: #1a1a1a;
+            --color-zombie-green: #00ff66;
+            --color-metal: #aaaaaa;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-dark);
+            color: var(--color-metal);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://placehold.co/1920x1080/000000/333333?text=DISTRESSED+CONCRETE+TEXTURE');
+            background-size: cover;
+        }
+        .title-text {
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 0 0 10px var(--color-blood), 0 0 20px var(--color-blood);
+            color: white;
+            animation: flicker 1.5s infinite alternate;
+            letter-spacing: 2px;
+        }
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: 0 0 7px var(--color-blood), 0 0 15px var(--color-blood);
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                text-shadow: none;
+                opacity: 0.8;
+            }
+        }
+        .zombie-glow {
+            box-shadow: 0 0 15px var(--color-zombie-green);
+            border-color: var(--color-zombie-green);
+        }
+        .blood-splatter {
+            color: var(--color-blood);
+        }
+        .container-card {
+            background-color: rgba(15, 15, 15, 0.95);
+            border: 2px solid var(--color-metal);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+        }
+        .warning-label {
+            background-color: var(--color-blood);
+            color: white;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(136, 0, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(136, 0, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(136, 0, 0, 0); }
+        }
+    </style>
+</head>
+<body class="p-4">
+
+    <!-- Main Content Container -->
+    <div class="container-card max-w-4xl w-full p-8 md:p-12 rounded-lg my-8">
+
+        <!-- Title -->
+        <header class="text-center mb-10">
+            <h1 class="title-text text-xl md:text-3xl lg:text-5xl mb-4">
+                HYOSAN HIGH QUARANTINE ZONE
+            </h1>
+            <p class="warning-label text-sm">Biohazard Level 5: UNCONTROLLABLE OUTBREAK</p>
+        </header>
+
+        <!-- Status Section -->
+        <section class="mb-8 border border-gray-700 p-6 rounded-md zombie-glow">
+            <h2 class="text-lg font-bold text-red-400 mb-4 uppercase">System Status: Failure Imminent</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div>
+                    <p class="font-bold text-gray-400">Time to Dusk:</p>
+                    <p class="text-white">00:03:47</p>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-400">Infection Rate:</p>
+                    <p class="text-red-500">99.9%</p>
+                </div>
+                <div>
+                    <p class="font-bold text-gray-400">Survivors Detected:</p>
+                    <p class="text-yellow-400">UNKNOWN (Static Interference)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Message/Log Section -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-300 mb-4">LAST TRANSMISSION LOG</h2>
+            <div class="bg-gray-900 p-6 rounded-md border-l-4 border-blood">
+                <p class="text-sm italic text-gray-400 mb-3">Audio Transcript - Fragmented - Source: Rooftop Egress</p>
+                <p class="text-white leading-relaxed">
+                    "...we can't hold them back! The door won't lock, the glass is cracked... just run! Go to the science lab, maybe there's something left... <span class="blood-splatter">don't trust anyone...</span> they look normal until it's too late. The only way out is through the data file. Find the key, unlock the escape route."
+                </p>
+                <p class="text-xs mt-3 text-red-600">-- END OF TRANSMISSION --</p>
+            </div>
+        </section>
+
+        <!-- Interactive Map Placeholder -->
+        <section class="text-center p-6 bg-gray-900/50 rounded-md">
+            <h2 class="text-xl font-bold text-gray-300 mb-2">HYOSAN HIGH LAYOUT (MAP DATA CORRUPTED)</h2>
+            <p class="text-xs text-gray-500 mb-4">Attempting to re-route primary server connection...</p>
+            <div class="h-40 bg-gray-800 border border-red-500/50 flex items-center justify-center rounded-md">
+                <p class="text-lg text-red-500 animate-pulse">[! ZOMBIE DETECTED - FEED GOING DARK !]</p>
+            </div>
+        </section>
+
+    </div>
+
+    
+    <script id="secret-flag-data" type="application/json">
+        {
+            "flag_type": "Hexadecimal_Encoded_CTF",
+            "hex_encoded_flag": "5048587B796F755F6172655F6465655F61647D"
+        }
+    </script>
+
+    <script>
+        // Simple client-side script for minor interaction/console logging
+        console.log("Hyosan High Security Protocol Initialized.");
+        console.warn("WARNING: This environment is unstable. Look for anomalies.");
+
+        // Function to simulate a blinking cursor effect
+        function blinkCursor() {
+            const warningLabel = document.querySelector('.warning-label');
+            if (warningLabel) {
+                if (warningLabel.classList.contains('opacity-100')) {
+                    warningLabel.classList.remove('opacity-100');
+                    warningLabel.classList.add('opacity-75');
+                } else {
+                    warningLabel.classList.remove('opacity-75');
+                    warningLabel.classList.add('opacity-100');
+                }
+            }
+        }
+        setInterval(blinkCursor, 800);
+    </script>
+
+</body>
+</html>
